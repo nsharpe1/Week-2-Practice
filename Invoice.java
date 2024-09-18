@@ -49,6 +49,16 @@ public class Invoice {
         return this.qty;
     }
 
+    public void setID(int id)
+    {
+        this.id = id;
+    }
+
+    public void setDesc(String desc)
+    {
+        this.desc = desc;
+    }
+
     public void setQty(int qty)
     {
         this.qty = qty;
@@ -58,16 +68,6 @@ public class Invoice {
     {
         double un = this.unitPrice;
         return String.format("$%,.2f", un);
-    }
-
-    public void setID(int id)
-    {
-        this.id = id;
-    }
-
-    public void setDesc(String desc)
-    {
-        this.desc = desc;
     }
 
     public void setUnitPrice(double unitPrice)
