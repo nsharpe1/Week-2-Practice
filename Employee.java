@@ -46,7 +46,7 @@ public class Employee {
     public double raiseSalary(int percent) 
     {
         double Salaryraise = (percent / 100.0) * this.salary;
-        this.salary += Salaryraise;
+        this.salary += (int)Salaryraise;
         return this.salary;
     } 
 

@@ -1,7 +1,7 @@
 import java.text.DecimalFormat;
 
 public class Invoice {
-    private int id;
+    private String id;
     private String desc;
     private int qty;
     private double unitPrice;
@@ -16,7 +16,7 @@ public class Invoice {
         invoiceCount++;
     }
     
-    public Invoice(int id, String desc, int qty, double unitPrice)
+    public Invoice(String id, String desc, int qty, double unitPrice)
     {
         this.id = id;
         this.desc = desc;
@@ -34,7 +34,7 @@ public class Invoice {
         invoiceCount++;
     }
 
-    public int getID()
+    public String getID()
     {
         return this.id;
     }
@@ -49,7 +49,7 @@ public class Invoice {
         return this.qty;
     }
 
-    public void setID(int id)
+    public void setID(String id)
     {
         this.id = id;
     }
@@ -77,7 +77,7 @@ public class Invoice {
 
     public String getTotal()
     {
-        double unitTotal = this.unitPrice * this.qty;
+        double unitTotal = unitPrice * this.qty;
         return String.format("$%,.2f", unitTotal);
     }
 
